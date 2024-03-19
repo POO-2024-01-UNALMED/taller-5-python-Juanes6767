@@ -7,3 +7,10 @@ class Ave(Animal):
     def __init__(self,nombre,edad,habitat,genero,colorPlumas):
         super.__init__(nombre,edad,habitat,genero)
         self._colorPlumas=colorPlumas
+
+    
+    def getColorPlumas(self):
+        return self._colorEscamas
+    
+    def setColorPlumas(self,colorEscamas):
+        self._colorEscamas=colorEscamas
