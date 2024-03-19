@@ -10,6 +10,26 @@ class Pez(Animal):
         self._largoCola=cantidadAletas
         listado=listado.append(self)
     
+    def agregarListado(cls,a):
+        cls.listado.append(a)
+    
+    def cantidadPeces(cls):
+        return (len(cls.listado))
+    
+    def crearBacalao(cls,nombre,edad,genero):
+        bacalao=Pez(nombre,edad,"oceano",genero,"gris",6)
+        cls.bacalaos+=1
+        Pez.agregarlistado(bacalao)
+        return bacalao
+    
+    def crearSalmon(cls,nombre,edad,genero):
+        salmon=Pez(nombre,edad,"oceano",genero,"rojo",6)
+        cls.salmones+=1
+        Pez.agregarlistado(salmon)
+        return salmon
+    
+   
+    
     def getColorEscamas(self):
         return self._colorEscamas
     
