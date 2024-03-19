@@ -21,7 +21,10 @@ class Animal:
         return "Mamiferos: "+len(Mamifero.getListado())+"\n"+"Aves: "+str(Ave.cantidadAves())+"\n"+"Reptiles: "+str(Reptil.cantidadReptiles())+"\n"+"Peces: "+str(Pez.cantidadPeces())+"\n"+"Anfibios: "+str(Anfibio.cantidadAnfibios())
 
     def toString(self):
-        return ""+nombre+self._zona.nombre+Zona.getZoo().nombre
+        if self._zona!=[]:
+            return "Mi nombre es "+self._nombre+", tengo una edad de "+str(self._edad)+", habito en "+self.habitat+" y mi genero es "+self._genero+", la zona en la que me ubico es "+self._zona[0].getNombre()+", en el "+self._zona[0].getZoo().getNombre()
+        else:
+            return "Mi nombre es "+self._nombre+", tengo una edad de "+str(self._edad)+", habito en "+self.habitat+" y mi genero es "+self._genero
 
     def getNombre(self):
         return self._nombre

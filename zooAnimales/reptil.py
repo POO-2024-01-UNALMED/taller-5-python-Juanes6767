@@ -8,7 +8,7 @@ class Reptil(Animal):
         super.__init__(nombre,edad,habitat,genero)
         self._colorEscamas=colorEscamas
         self._largoCola=largoCola
-    
+        listado=listado.append(self)
 
     def getColorEscamas(self):
         return self._colorEscamas

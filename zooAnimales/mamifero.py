@@ -8,7 +8,28 @@ class Mamifero(Animal):
         super.__init__(nombre,edad,habitat,genero)
         self._pelaje=pelaje
         self._patas=patas
+        listado=listado.append(self)
 
+    def agregarListado(cls,a):
+        cls.listado.append(a)
+    
+    def cantidadMamiferos(cls):
+        return (len(cls.listado))
+    
+    def crearLeon(cls,nombre,edad,genero):
+        leon=Mamifero(nombre,edad,"selva",genero,True,4)
+        cls.leones+=1
+        Mamifero.agregarlistado(leon)
+        return leon
+    
+    def crearCaballo(cls,nombre,edad,genero):
+        caballo=Mamifero(nombre,edad,"pradera",genero,True,4)
+        cls.caballos+=1
+        Mamifero.agregarlistado(caballo)
+        return caballo
+    
+    
+    
     def getPelaje(self):
         return self._pelaje
     
